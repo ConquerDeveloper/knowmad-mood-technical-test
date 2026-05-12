@@ -20,6 +20,12 @@ https://knowmad-mood-technical-test.vercel.app/
 
 ---
 
+# Preview
+
+![Application preview](./public/preview.png)
+
+---
+
 # Technologies Used
 
 * React
