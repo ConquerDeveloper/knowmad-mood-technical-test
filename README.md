@@ -20,15 +20,9 @@ https://knowmad-mood-technical-test.vercel.app/
 
 ---
 
-# Preview
+## Preview
 
-![Application preview](./public/preview.png)
-
----
-
-## Demo Video
-
-[Watch demo video](./public/demo.mov)
+![Application preview](./public/preview.gif)
 
 ---
 
