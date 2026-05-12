@@ -22,7 +22,13 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px;
+  overflow-x: hidden;
 }
+
+/***
+*** CARD STYLES
+ ***/
+
 
 .card {
   width: 900px;
@@ -55,6 +61,11 @@ body {
   margin-top: 13px;
   margin-bottom: 35px;
 }
+
+/***
+*** LIST STYLES
+ ***/
+
 
 .listBox {
   width: 800px;
@@ -90,6 +101,11 @@ body {
 .listItem span {
   margin-left: 15px;
 }
+
+/***
+*** ACTION STYLES
+ ***/
+
 
 .actions {
   padding: 30px 20px;
@@ -155,7 +171,7 @@ body {
 }
 
 /***
-*** MODAL STYLES ***
+*** MODAL STYLES
 ***/
 
 .modalOverlay {
@@ -166,7 +182,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 50px;
 
   opacity: 0;
   visibility: hidden;
@@ -183,7 +199,8 @@ body {
 
 .modal {
   width: 700px;
-  height: 276px;
+  min-height: 276px;
+  height: auto;
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0 10px 24px #0000001F;
@@ -231,17 +248,98 @@ body {
   color: #999;
 }
 
-.modalInput::placeholder {
-  color: #AAAAAA;
-}
-
 .modalActions {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-top: 25px;
 }
+
+/***
+*** STATES STYLES
+ ***/
+
 
 button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+}
+
+/***
+*** RESPONSIVE STYLES
+ ***/
+
+
+@media (max-width: 960px) {
+  .card {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    min-height: 577px;
+  }
+
+  .listBox {
+    width: 100%;
+  }
+  .actions {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .card {
+    height: auto;
+    /* min-height: calc(100vh - 32px);*/
+    padding: 28px 20px;
+  }
+
+  .card h1 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 0;
+  }
+
+  .card p {
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 24px;
+  }
+
+  .listBox {
+    height: 220px;
+    padding: 18px 10px;
+  }
+
+  .actions {
+    padding: 24px 0 0;
+    gap: 16px;
+  }
+
+  .leftActions {
+    gap: 12px;
+  }
+
+  .outlineButton {
+    margin-left: 0;
+  }
+
+  .modalOverlay {
+    padding: 24px 16px;
+    align-items: flex-start;
+  }
+
+  .modal {
+    width: 100%;
+    height: auto;
+    padding: 32px 24px;
+  }
+
+  .modalActions {
+    gap: 12px;
+  }
 }
