@@ -1,73 +1,163 @@
-# React + TypeScript + Vite
+# Knowmad Mood Technical Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technical test developed with React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+The application allows users to manage a list of text items with the following features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Add new items
+* Select and unselect items
+* Delete selected items
+* Delete items with double click
+* Undo last action
+* Responsive layout
+* Pixel-perfect UI based on Adobe XD design
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Technologies Used
 
-## Expanding the ESLint configuration
+* React
+* TypeScript
+* Vite
+* CSS3
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Install dependencies
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Run development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## Build project
+
+```bash
+npm run build
+```
+
+---
+
+# Features
+
+## Add items
+
+Users can open a modal and add new text items to the list.
+
+Validation included:
+
+* Empty values are not allowed
+* Leading and trailing spaces are trimmed
+
+Extra UX:
+
+* Press `Enter` to add item
+* Press `Escape` to close modal
+
+---
+
+## Select items
+
+Items can be selected and unselected by clicking on them.
+
+---
+
+## Delete selected items
+
+The DELETE button removes all selected items.
+
+The button is automatically disabled when no item is selected.
+
+---
+
+## Double click delete
+
+Users can remove individual items by double clicking them.
+
+---
+
+## Undo last action
+
+The refresh button restores the previous list state.
+
+Supported actions:
+
+* Add item
+* Delete selected items
+* Double click delete
+
+---
+
+# Project Structure
+
+```txt
+src/
+├── components/
+│   ├── AddItemModal.tsx
+│   ├── InputBar.tsx
+│   ├── ItemList.tsx
+│   └── ListItem.tsx
+│
+├── types/
+│   ├── text-item.ts
+│   └── component-props.ts
+│
+├── App.tsx
+├── App.css
+├── main.tsx
+└── index.css
+```
+
+---
+
+# UI Notes
+
+The UI was implemented following the Adobe XD design provided in the technical test.
+
+Implemented details:
+
+* Linear gradient background
+* Rounded cards and buttons
+* Smooth modal animations
+* Responsive behavior
+* Typography and spacing adjustments
+* Disabled states
+* Hover-ready structure
+
+---
+
+# Responsive Design
+
+The layout adapts to smaller screen sizes while preserving the original desktop design.
+
+Responsive adjustments include:
+
+* Flexible card width
+* Adaptive modal sizing
+* Mobile spacing improvements
+* Preventing horizontal overflow
+
+---
+
+# Accessibility & UX
+
+Implemented improvements:
+
+* Disabled button states
+* Keyboard shortcuts
+* Semantic buttons
+* Focus-friendly inputs
+* Smooth modal transitions
+
+---
+
+# Author
+
+Kevin Abreu
