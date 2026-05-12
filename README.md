@@ -26,6 +26,12 @@ https://knowmad-mood-technical-test.vercel.app/
 
 ---
 
+## Demo Video
+
+[Watch demo video](./public/demo.mov)
+
+---
+
 # Technologies Used
 
 * React
