@@ -14,12 +14,21 @@ The application allows users to manage a list of text items with the following f
 
 ---
 
+# Live Demo
+
+https://knowmad-mood-technical-test.vercel.app/
+
+---
+
 # Technologies Used
 
 * React
 * TypeScript
 * Vite
 * CSS3
+* Vitest
+* React Testing Library
+* Playwright
 
 ---
 
@@ -41,6 +50,25 @@ npm run dev
 
 ```bash
 npm run build
+```
+
+# Testing
+
+## Run unit tests
+
+```bash
+npm run test
+```
+
+## Run E2E tests
+
+```bash
+npm run test:e2e
+```
+
+## Run E2E tests in headed mode
+```bash
+npm run test:e2e -- --headed
 ```
 
 ---
@@ -99,11 +127,17 @@ Supported actions:
 
 ```txt
 src/
+├── __tests__/
+│   └── App.test.tsx
+│
 ├── components/
 │   ├── AddItemModal.tsx
 │   ├── InputBar.tsx
 │   ├── ItemList.tsx
 │   └── ListItem.tsx
+│
+├── test/
+│   └── setup.ts
 │
 ├── types/
 │   ├── text-item.ts
@@ -113,6 +147,9 @@ src/
 ├── App.css
 ├── main.tsx
 └── index.css
+
+e2e/
+└── app.spec.ts
 ```
 
 ---
@@ -157,6 +194,20 @@ Implemented improvements:
 * Smooth modal transitions
 
 ---
+
+# Test Coverage
+
+The project includes both unit/integration tests and end-to-end tests.
+
+Covered scenarios:
+
+* Initial item rendering
+* Add new item flow
+* Empty input validation
+* Delete selected items
+* Double click delete
+* Undo functionality
+* Modal interactions
 
 # Author
 
