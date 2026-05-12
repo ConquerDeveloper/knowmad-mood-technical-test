@@ -125,7 +125,7 @@ src/
 
 # UI Notes
 
-The UI was implemented following the Adobe XD design provided in the technical test.
+The UI was implemented following the Adobe XD design provided in the technical test: https://xd.adobe.com/view/ea696dd0-8781-4460-8720-36deb2d19b2a-bf3a/
 
 Implemented details:
 
