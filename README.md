@@ -14,6 +14,12 @@ The application allows users to manage a list of text items with the following f
 
 ---
 
+# Live Demo
+
+https://knowmad-mood-technical-test.vercel.app/
+
+---
+
 # Technologies Used
 
 * React
